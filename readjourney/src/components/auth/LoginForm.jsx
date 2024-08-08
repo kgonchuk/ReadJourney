@@ -50,6 +50,7 @@ export default function LoginForm() {
   const handleSubmit = async (values) => {
     try {
       await dispatch(logIn(values)).unwrap();
+      console.log(values);
       navigate("/recommended");
     } catch (error) {
       Notiflix.Notify.warning("Please check the Mail and Password.");

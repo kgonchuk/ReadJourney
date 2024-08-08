@@ -99,8 +99,6 @@ export const ImageWrap = styled.div`
   max-width: 600px;
   background-color: ${color.blackLight};
   border-radius: 30px;
-  /* margin: 0 auto; */
-  /* padding: 40px 64px; */
 `;
 export const Icon = styled.svg`
   position: absolute;

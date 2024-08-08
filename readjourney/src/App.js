@@ -5,6 +5,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import LoginPage from "./pages/LoginPage";
 import RecommendedPage from "./pages/RecommendedPage";
+import LibraryPage from "./pages/LibraryPage";
 
 // const Register = lazy(() => import("./pages/RegisterPage.jsx"));
 // const Login = lazy(() => import("./pages/RegisterPage.jsx"));
@@ -19,6 +20,7 @@ function App() {
 
           <Route path="/login" element={<LoginPage />} />
           <Route path="/recommended" element={<RecommendedPage />} />
+          <Route path="/library" element={<LibraryPage />} />
         </Route>
       </Routes>
     </>

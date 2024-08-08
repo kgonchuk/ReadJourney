@@ -3,7 +3,6 @@ import {
   BtnContainer,
   Container,
   ContainerForm,
-  ContainerWrap,
   FeedbackMessage,
   FormField,
   FormWrap,
@@ -16,14 +15,12 @@ import {
 import { Form, Formik } from "formik";
 import * as Yup from "yup";
 import HeaderTittle from "../headerTittle/HeaderTittle";
-import RegistrationButton from "../SubmissionButton/RegistrationButton";
 import icon from "../../img/sprite.svg";
 import HomepageImage from "../HomepageImage/HomepageImage";
 import {
   RegisterBtn,
   RegisterLink,
 } from "../SubmissionButton/SubmissioButton.styled";
-import LoginPage from "../../pages/LoginPage";
 import { useDispatch } from "react-redux";
 import { register } from "../../redux/auth/authOperation";
 import { useNavigate } from "react-router-dom";
@@ -201,7 +198,6 @@ export default function RegisterForm() {
                   </FormField>
                 </InputGroup>
                 <BtnContainer style={{ marginTop: "auto" }}>
-                  {/* <RegistrationButton /> */}
                   <RegisterBtn type="submit">Registration</RegisterBtn>
                   <RegisterLink to="/login">
                     Already have an account?

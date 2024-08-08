@@ -1,17 +1,26 @@
 import {
   DashboardBtn,
   DashboardBtnWrap,
-  DashboardContainer,
-  DashboardGroup,
-  DashboardInput,
-  DashboardLabel,
-  FormText,
   FormWrapper,
+  ResetBtn,
 } from "./RecommendedDashboard.styled";
+import {
+  FilterTitle,
+  FormField,
+  FormFieldConteiner,
+  FormFieldLabel,
+  FormFields,
+} from "../../components/Dashboard/Dashboard.styled";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import Remark from "../Remark/Remark";
 import RecommendedFunction from "../RecommendedFunction/RecommendedFunction";
+import Dashboard from "../Dashboard/Dashboard";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { fetchBooks } from "../../redux/books/booksOperation";
+import Notiflix from "notiflix";
+import { RemarkContainer } from "../Remark/Remark.styled";
 
 const initialValues = {
   title: "",
@@ -22,43 +31,82 @@ const schema = Yup.object({
   author: Yup.string(),
 });
 export default function RecommendedDashboard() {
-  const handleSubmit = () => {};
+  const [isRestButtonVisible, setIsRestButtonVisible] = useState(false);
+  const dispatch = useDispatch();
+
+  const handleSubmit = (e) => {
+    const { title, author } = e;
+    if (title === undefined) return;
+    if (title) {
+      setIsRestButtonVisible(true);
+      dispatch(fetchBooks({ title, author }));
+    } else {
+      Notiflix.Notify.failure("Kindly complete the form");
+    }
+    document.getElementById("page").blur();
+  };
+
+  const handleReset = (resetForm) => {
+    setIsRestButtonVisible(false);
+    resetForm();
+    dispatch(fetchBooks({ page: 1, limit: 10 }));
+  };
+
   return (
-    <DashboardContainer>
-      <FormWrapper>
-        <FormText>Filters:</FormText>
-        <Formik
-          initialValues={initialValues}
-          validate={schema}
-          onSubmit={handleSubmit}
-        >
-          <Form>
-            <DashboardGroup>
-              <DashboardLabel htmlFor="title">Book title:</DashboardLabel>
-              <DashboardInput
-                name="title"
-                id="title"
-                type="title"
-                placeholder="Enter text"
-              />
-            </DashboardGroup>
-            <DashboardGroup>
-              <DashboardLabel htmlFor="author">The author:</DashboardLabel>
-              <DashboardInput
-                name="author"
-                id="author"
-                type="author"
-                placeholder="Enter text"
-              />
-            </DashboardGroup>
-            <DashboardBtnWrap>
-              <DashboardBtn type="submit">To apply</DashboardBtn>
-            </DashboardBtnWrap>
-          </Form>
-        </Formik>
-        {/* <RecommendedFunction /> */}
+    <Dashboard>
+      <DashboardBtnWrap>
+        <FormWrapper>
+          <FilterTitle>Filters:</FilterTitle>
+          <Formik
+            initialValues={initialValues}
+            validationSchema={schema}
+            onSubmit={handleSubmit}
+          >
+            {({ resetForm }) => (
+              <Form>
+                <FormFields>
+                  <FormFieldConteiner>
+                    <FormFieldLabel htmlFor="title">Book title:</FormFieldLabel>
+                    <FormField
+                      name="title"
+                      id="title"
+                      type="title"
+                      placeholder="Enter text"
+                    />
+                  </FormFieldConteiner>
+                  <FormFieldConteiner>
+                    <FormFieldLabel htmlFor="author">
+                      The author:
+                    </FormFieldLabel>
+                    <FormField
+                      name="author"
+                      id="author"
+                      type="author"
+                      placeholder="Enter text"
+                    />
+                  </FormFieldConteiner>
+                </FormFields>
+                <DashboardBtnWrap>
+                  <DashboardBtn type="submit" onClick={handleSubmit}>
+                    To apply
+                  </DashboardBtn>
+                  {isRestButtonVisible && (
+                    <ResetBtn
+                      label="Rest"
+                      onClick={() => handleReset(resetForm)}
+                    >
+                      Reset
+                    </ResetBtn>
+                  )}
+                </DashboardBtnWrap>
+              </Form>
+            )}
+          </Formik>
+        </FormWrapper>
+
+        <RecommendedFunction />
         <Remark />
-      </FormWrapper>
-    </DashboardContainer>
+      </DashboardBtnWrap>
+    </Dashboard>
   );
 }
