@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/ReadJourney/static/css/main.59e68b67.css",
-    "main.js": "/ReadJourney/static/js/main.a04e0e50.js",
-    "static/media/homepageDesctop@2x.jpg": "/ReadJourney/static/media/homepageDesctop@2x.b6383e21ca50a16f7d2b.jpg",
-    "static/media/Gilroy-Medium.woff": "/ReadJourney/static/media/Gilroy-Medium.5329bc502cdc219ad294.woff",
-    "static/media/Gilroy-Bold.woff": "/ReadJourney/static/media/Gilroy-Bold.0607a1bc636f63251ed8.woff",
-    "static/media/homepageMobile@2x.jpg": "/ReadJourney/static/media/homepageMobile@2x.503e819c2b9128880434.jpg",
-    "static/media/bookMob.png": "/ReadJourney/static/media/bookMob.4f953795e8b1d7f73647.png",
-    "static/media/homepageDesctop.jpg": "/ReadJourney/static/media/homepageDesctop.52cadf9d6f10bd5455ca.jpg",
-    "static/media/bookDesc2x.png": "/ReadJourney/static/media/bookDesc2x.63296693f7be5f731eeb.png",
-    "static/media/remark@2.png": "/ReadJourney/static/media/remark@2.122362455ea575b13523.png",
-    "static/media/succes@2x.png": "/ReadJourney/static/media/succes@2x.800812393f912c7508c4.png",
-    "static/media/succesMob@2x.png": "/ReadJourney/static/media/succesMob@2x.800812393f912c7508c4.png",
-    "static/media/homepageMobile.jpg": "/ReadJourney/static/media/homepageMobile.5d988c5ea2cfe97b143a.jpg",
-    "static/media/sprite.svg": "/ReadJourney/static/media/sprite.a44eee3165d90cf94a34d802cd201e04.svg",
-    "index.html": "/ReadJourney/index.html",
-    "main.59e68b67.css.map": "/ReadJourney/static/css/main.59e68b67.css.map",
-    "main.a04e0e50.js.map": "/ReadJourney/static/js/main.a04e0e50.js.map"
+    "main.css": "/static/css/main.59e68b67.css",
+    "main.js": "/static/js/main.2ac3fd4a.js",
+    "static/media/homepageDesctop@2x.jpg": "/static/media/homepageDesctop@2x.b6383e21ca50a16f7d2b.jpg",
+    "static/media/Gilroy-Medium.woff": "/static/media/Gilroy-Medium.5329bc502cdc219ad294.woff",
+    "static/media/Gilroy-Bold.woff": "/static/media/Gilroy-Bold.0607a1bc636f63251ed8.woff",
+    "static/media/homepageMobile@2x.jpg": "/static/media/homepageMobile@2x.503e819c2b9128880434.jpg",
+    "static/media/bookMob.png": "/static/media/bookMob.4f953795e8b1d7f73647.png",
+    "static/media/homepageDesctop.jpg": "/static/media/homepageDesctop.52cadf9d6f10bd5455ca.jpg",
+    "static/media/bookDesc2x.png": "/static/media/bookDesc2x.63296693f7be5f731eeb.png",
+    "static/media/remark@2.png": "/static/media/remark@2.122362455ea575b13523.png",
+    "static/media/succes@2x.png": "/static/media/succes@2x.800812393f912c7508c4.png",
+    "static/media/succesMob@2x.png": "/static/media/succesMob@2x.800812393f912c7508c4.png",
+    "static/media/homepageMobile.jpg": "/static/media/homepageMobile.5d988c5ea2cfe97b143a.jpg",
+    "static/media/sprite.svg": "/static/media/sprite.a44eee3165d90cf94a34d802cd201e04.svg",
+    "index.html": "/index.html",
+    "main.59e68b67.css.map": "/static/css/main.59e68b67.css.map",
+    "main.2ac3fd4a.js.map": "/static/js/main.2ac3fd4a.js.map"
   },
   "entrypoints": [
     "static/css/main.59e68b67.css",
-    "static/js/main.a04e0e50.js"
+    "static/js/main.2ac3fd4a.js"
   ]
 }
