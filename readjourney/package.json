@@ -1,6 +1,7 @@
 {
   "name": "readjourney",
   "version": "0.1.0",
+  "homepage": "https://kgonchuk.github.io/ReadJourney/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.6",
@@ -26,7 +27,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build && cp build/index.html build/404.html",
+  "deploy": "gh-pages -d build",
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +50,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-transform-private-property-in-object": "^7.24.7"
+    "@babel/plugin-transform-private-property-in-object": "^7.24.7",
+    "gh-pages": "^6.3.0"
   }
 }

@@ -1,4 +1,4 @@
-import color from "global/GlobalColors";
+
 import styled from "styled-components";
 
 export const ModalContainer = styled.div`
@@ -10,7 +10,7 @@ export const ModalContainer = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: ${color.dimmedBackground};
+  background-color: #fff;
   overflow: auto;
   z-index: 5;
   transition: all 0.3s ease;
