@@ -1,7 +1,7 @@
 {
   "name": "readjourney",
   "version": "0.1.0",
-  "homepage": "https://kgonchuk.github.io/ReadJourney/",
+
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.6",
